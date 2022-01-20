@@ -22,7 +22,7 @@ from mysite.views import *
 
 urlpatterns = [
     path('', index, name='index'),
-    path('register', register, name='register'),
-    path('login', LoginView.as_view(), name='login'),
-    path('logout', LogoutView.as_view(), name='logout'),
+    path('register/', register, name='register'),
+    path('login/', LoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
