@@ -66,7 +66,9 @@
             <li
               class="col list-unstyled align-self-center align-self=center col-4"
             >
-              <a class="nav-link link-light" href="/templates/upload.html">Upload</a>
+              <a class="nav-link link-light" href="/templates/upload.html"
+                >Upload</a
+              >
             </li>
             <li class="col list-unstyled align-self-center col-8">
               <a
@@ -90,9 +92,11 @@
         >
           <h1 class="h2">Регистрация</h1>
           <form
+            action="/action_page.php"
             method="POST"
             class="align-items-center justify-content-center align-self-center flex-column"
             style="display: flex; width: 100%"
+            id="regForm"
           >
             <div
               class="card-body justify-content-center align-items-center text-start input-group pb-1"
@@ -125,7 +129,7 @@
                   class="form-check-input mb-3"
                   type="checkbox"
                   id="developerCheckbox"
-                  name="cb"
+                  name="checkbox"
                   value="developer"
                   style="
                     background-color: #e5e5e5;
@@ -143,8 +147,8 @@
                   class="form-check-input mb-3"
                   type="checkbox"
                   id="artistCheckbox"
-                  name="cb"
-                  value="developer"
+                  name="checkbox"
+                  value="artist"
                   style="
                     background-color: #e5e5e5;
                     height: 25px;
@@ -159,12 +163,14 @@
                 >
               </fieldset>
             </div>
-            <a
-              href="#"
+            <button
+              id="registerBtn"
+              type="submit"
               class="btn btn-primary"
               style="background: linear-gradient(#f70, #f30)"
-              >Done</a
             >
+              Done
+            </button>
           </form>
         </div>
       </main>

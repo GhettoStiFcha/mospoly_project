@@ -33,7 +33,7 @@
             "
           ></a>
         </div>
-        <form method="GET" style="width: 100%">
+        <form action="" method="POST" style="width: 100%">
           <div class="input-group">
             <label for="search" hidden>Search</label>
             <input
@@ -92,6 +92,7 @@
         >
           <h1 class="h2">Upload</h1>
           <form
+            action="/action_page.php"
             method="POST"
             class="align-items-center justify-content-center align-self-center flex-column"
             style="display: flex; width: 100%"
@@ -111,19 +112,20 @@
               />
               <label hidden for="pass">File</label>
               <input
-                  type="file"
-                  class="form-control w-100"
-                  id="inputGroupFile04"
-                  aria-describedby="inputGroupFileAddon04"
-                  aria-label="Upload"
-                />
+                type="file"
+                class="form-control w-100"
+                id="inputGroupFile04"
+                aria-describedby="inputGroupFileAddon04"
+                aria-label="Upload"
+              />
             </div>
-            <a
-              href="#"
+            <button
+              type="submit"
               class="btn btn-primary"
               style="background: linear-gradient(#f70, #f30)"
-              >Done</a
             >
+              Done
+            </button>
           </form>
         </div>
       </main>

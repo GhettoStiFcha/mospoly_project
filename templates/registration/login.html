@@ -33,7 +33,7 @@
             "
           ></a>
         </div>
-        <form method="GET" style="width: 100%">
+        <form action="" method="POST" style="width: 100%">
           <div class="input-group">
             <label for="search" hidden>Search</label>
             <input
@@ -66,7 +66,9 @@
             <li
               class="col list-unstyled align-self-center align-self=center col-4"
             >
-              <a class="nav-link link-light" href="/templates/upload.html">Upload</a>
+              <a class="nav-link link-light" href="/templates/upload.html"
+                >Upload</a
+              >
             </li>
             <li class="col list-unstyled align-self-center col-8">
               <a
@@ -90,6 +92,7 @@
         >
           <h1 class="h2">Логин</h1>
           <form
+            action="/action_page.php"
             method="POST"
             class="align-items-center justify-content-center align-self-center flex-column"
             style="display: flex; width: 100%"
@@ -117,12 +120,13 @@
                 style="background-color: #e5e5e5"
               />
             </div>
-            <a
-              href="#"
+            <button
+              type="submit"
               class="btn btn-primary"
               style="background: linear-gradient(#f70, #f30)"
-              >Done</a
             >
+              Done
+            </button>
           </form>
         </div>
       </main>
