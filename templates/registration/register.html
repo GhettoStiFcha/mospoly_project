@@ -22,6 +22,7 @@
       >
         <div class="logo-box col-3" style="height: 100%">
           <a
+            href="/templates/index.html"
             class="logo-container"
             style="
               display: block;
@@ -68,8 +69,11 @@
               <a class="nav-link link-light" href="/">Upload</a>
             </li>
             <li class="col list-unstyled align-self-center col-8">
-              <a class="nav-link link-light" style="width: 100%" href="#"
-                >Имя пользователя</a
+              <a
+                class="nav-link link-light"
+                style="width: 100%"
+                href="/templates/registration/login.html"
+                >Логин</a
               >
             </li>
           </ul>
@@ -78,38 +82,99 @@
 
       <main
         class="flex-column justify-content-center align-items-center bg-white"
-        style="display:flex; min-height: 800px;"
+        style="display: flex; min-height: 800px"
       >
-        <div class="card" style="margin:0 auto; width: 30%; padding: 10px; text-align: center;">
-            <h1 class="h2">Регистрация</h1>
-            <form method="POST" class="align-items-center justify-content-center align-self-center flex-column" style="display: flex; width: 100%;">
-                <div class="card-body justify-content-center align-items-center text-start input-group pb-1" style="display: flex; flex-direction: column;">
-                    <label hidden for="login">Login</label>
-                    <input class="form-control w-100 mb-3" id="registrationLogin" name="login" type="text" placeholder="Логин" style="background-color: #e5e5e5;">
-                    <label hidden for="pass">Password</label>
-                    <input class="form-control w-100 mb-3" id="registrationPass" name="pass" type="password" placeholder="Пароль" style="background-color: #e5e5e5;">
-                    <fieldset class="check-box row flex-row w-100" style="display: flex;">
-                        <legend hidden>checkboxes</legend>          
-                        <input class="form-check-input mb-3" type="checkbox" id="developerCheckbox" name="cb" value="developer" style="background-color: #e5e5e5; height: 25px; background-color: #666;">
-                        <label class="form-check-label" for="developerCheckbox" style="width: 42%; margin-top: 4px;">Разработчик</label>  
-                        <input class="form-check-input mb-3" type="checkbox" id="artistCheckbox" name="cb" value="developer" style="background-color: #e5e5e5; height: 25px; background-color: #666;">
-                        <label class="form-check-label" for="artistCheckbox" style="width: 42%; margin-top: 4px;">Исполнитель</label>
-                    </fieldset>
-                    
-                </div>
-                <a href="#" class="btn btn-primary" style="background: linear-gradient(#f70, #f30);">Done</a>
-            </form>
+        <div
+          class="card"
+          style="margin: 0 auto; width: 30%; padding: 10px; text-align: center"
+        >
+          <h1 class="h2">Регистрация</h1>
+          <form
+            method="POST"
+            class="align-items-center justify-content-center align-self-center flex-column"
+            style="display: flex; width: 100%"
+          >
+            <div
+              class="card-body justify-content-center align-items-center text-start input-group pb-1"
+              style="display: flex; flex-direction: column"
+            >
+              <label hidden for="login">Login</label>
+              <input
+                class="form-control w-100 mb-3"
+                id="registrationLogin"
+                name="login"
+                type="text"
+                placeholder="Логин"
+                style="background-color: #e5e5e5"
+              />
+              <label hidden for="pass">Password</label>
+              <input
+                class="form-control w-100 mb-3"
+                id="registrationPass"
+                name="pass"
+                type="password"
+                placeholder="Пароль"
+                style="background-color: #e5e5e5"
+              />
+              <fieldset
+                class="check-box row flex-row w-100"
+                style="display: flex"
+              >
+                <legend hidden>checkboxes</legend>
+                <input
+                  class="form-check-input mb-3"
+                  type="checkbox"
+                  id="developerCheckbox"
+                  name="cb"
+                  value="developer"
+                  style="
+                    background-color: #e5e5e5;
+                    height: 25px;
+                    background-color: #666;
+                  "
+                />
+                <label
+                  class="form-check-label"
+                  for="developerCheckbox"
+                  style="width: 42%; margin-top: 4px"
+                  >Разработчик</label
+                >
+                <input
+                  class="form-check-input mb-3"
+                  type="checkbox"
+                  id="artistCheckbox"
+                  name="cb"
+                  value="developer"
+                  style="
+                    background-color: #e5e5e5;
+                    height: 25px;
+                    background-color: #666;
+                  "
+                />
+                <label
+                  class="form-check-label"
+                  for="artistCheckbox"
+                  style="width: 42%; margin-top: 4px"
+                  >Исполнитель</label
+                >
+              </fieldset>
+            </div>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background: linear-gradient(#f70, #f30)"
+              >Done</a
+            >
+          </form>
         </div>
       </main>
     </div>
 
-
-<!-- POST /register
+    <!-- POST /register
     username: string
     password1: string
     password2: string
     role: int (0: MUSICIAN; 1: GAMEDEV) -->
-
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
