@@ -77,17 +77,18 @@
       </header>
 
       <main
-        class="col justify-content-center align-items-center bg-white"
-        style="min-height: 800px;"
+        class="flex-column justify-content-center align-items-center bg-white"
+        style="display:flex; min-height: 800px;"
       >
-        <div class="card" style="margin:0 auto; width: 18rem;">
-            <form method="POST">
-                <div class="card-body justify-content-center align-items-center text-center" style="display: flex; flex-direction: column;">
-                    
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="card" style="margin:0 auto; width: 18rem; padding: 10px;">
+            <form method="POST" class="align-items-center justify-content-center align-self-center flex-column" style="display: flex;">
+                <div class="card-body justify-content-center align-items-center text-start input-group" style="display: flex; flex-direction: column;">
+                    <label hidden for="email">Email</label>
+                    <input class="form-control w-100 mb-3" id="loginEmail" name="email" type="email" placeholder="user333@gmail.com" style="background-color: #e5e5e5;">
+                    <label hidden for="pass">Password</label>
+                    <input class="form-control w-100" id="loginPass" name="pass" type="password" style="background-color: #e5e5e5;"> 
                 </div>
+                <a href="#" class="btn btn-primary" style="background: linear-gradient(#f70, #f30);">Login</a>
             </form>
         </div>
       </main>
