@@ -43,9 +43,11 @@ main{
   transform: translateX(0);
 }
 
-
-
-
+.play{
+    background-image: url(/mysite/static/images/play.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 /* .carousel-inner .carousel-item-end.active,
 .carousel-inner .carousel-item-next {
