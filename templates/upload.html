@@ -66,7 +66,9 @@
             <li
               class="col list-unstyled align-self-center align-self=center col-4"
             >
-              <a class="nav-link link-light" href="/templates/upload.html">Upload</a>
+              <a class="nav-link link-light" href="/templates/upload.html"
+                >Upload</a
+              >
             </li>
             <li class="col list-unstyled align-self-center col-8">
               <a
@@ -88,7 +90,7 @@
           class="card"
           style="margin: 0 auto; width: 30%; padding: 10px; text-align: center"
         >
-          <h1 class="h2">Логин</h1>
+          <h1 class="h2">Upload</h1>
           <form
             method="POST"
             class="align-items-center justify-content-center align-self-center flex-column"
@@ -98,24 +100,23 @@
               class="card-body justify-content-center align-items-center text-start input-group"
               style="display: flex; flex-direction: column"
             >
-              <label hidden for="login">Login</label>
+              <label hidden for="login">Name</label>
               <input
                 class="form-control w-100 mb-3"
                 id="loginLogin"
                 name="login"
                 type="text"
-                placeholder="Логин"
+                placeholder="Название"
                 style="background-color: #e5e5e5"
               />
-              <label hidden for="pass">Password</label>
+              <label hidden for="pass">File</label>
               <input
-                class="form-control w-100"
-                id="loginPass"
-                name="pass"
-                type="password"
-                placeholder="Пароль"
-                style="background-color: #e5e5e5"
-              />
+                  type="file"
+                  class="form-control w-100"
+                  id="inputGroupFile04"
+                  aria-describedby="inputGroupFileAddon04"
+                  aria-label="Upload"
+                />
             </div>
             <a
               href="#"
