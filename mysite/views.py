@@ -2,6 +2,7 @@ import mimetypes
 
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
@@ -17,10 +18,10 @@ def register(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid() and form.data['role']:
-            form.save()
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=password)
+            user = User.objects.create_user(username, password=password)
+            authenticate(user)
             Profile(user=user, role=form.data['role']).save()
             login(request, user)
             return redirect('index')

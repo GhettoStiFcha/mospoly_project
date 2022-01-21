@@ -98,6 +98,7 @@
             style="display: flex; width: 100%"
             id="regForm"
           >
+              {% csrf_token %}
             <div
               class="card-body justify-content-center align-items-center text-start input-group pb-1"
               style="display: flex; flex-direction: column"
@@ -106,7 +107,7 @@
               <input
                 class="form-control w-100 mb-3"
                 id="registrationLogin"
-                name="login"
+                name="username"
                 type="text"
                 placeholder="Логин"
                 style="background-color: #e5e5e5"
@@ -115,9 +116,18 @@
               <input
                 class="form-control w-100 mb-3"
                 id="registrationPass"
-                name="pass"
+                name="password1"
                 type="password"
                 placeholder="Пароль"
+                style="background-color: #e5e5e5"
+              />
+               <label hidden for="pass2">Password Verification</label>
+              <input
+                class="form-control w-100 mb-3"
+                id="pass2"
+                name="password2"
+                type="password"
+                placeholder="Проверка"
                 style="background-color: #e5e5e5"
               />
               <fieldset
@@ -129,7 +139,7 @@
                   class="form-check-input mb-3"
                   type="radio"
                   id="developerCheckbox"
-                  name="checkbox"
+                  name="role"
                   value="1"
                   style="
                     background-color: #e5e5e5;
@@ -147,7 +157,7 @@
                   class="form-check-input mb-3"
                   type="radio"
                   id="artistCheckbox"
-                  name="checkbox"
+                  name="role"
                   value="0"
                   style="
                     background-color: #e5e5e5;

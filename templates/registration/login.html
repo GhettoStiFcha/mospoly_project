@@ -97,6 +97,7 @@
             class="align-items-center justify-content-center align-self-center flex-column"
             style="display: flex; width: 100%"
           >
+              {% csrf_token %}
             <div
               class="card-body justify-content-center align-items-center text-start input-group"
               style="display: flex; flex-direction: column"
@@ -105,16 +106,16 @@
               <input
                 class="form-control w-100 mb-3"
                 id="loginLogin"
-                name="login"
+                name="username"
                 type="text"
                 placeholder="Логин"
                 style="background-color: #e5e5e5"
               />
-              <label hidden for="pass">Password</label>
+              <label hidden for="loginPass">Password</label>
               <input
                 class="form-control w-100"
                 id="loginPass"
-                name="pass"
+                name="password"
                 type="password"
                 placeholder="Пароль"
                 style="background-color: #e5e5e5"
