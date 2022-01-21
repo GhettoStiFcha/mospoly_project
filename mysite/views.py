@@ -37,15 +37,16 @@ def music(request):
         if form.is_valid():
             newdoc = Music(title=request.POST['title'], file=request.FILES['file'], user=request.user)
             newdoc.save()
-        return redirect('index')
+            return redirect('index')
     else:
         form = MusicForm()
 
-    data = Music.objects.all()
-    return render(request, 'music/index.html', {'form': form, 'music': data})
+    return render(request, 'upload.html', {'form': form})
+
 
 def audio(request):
     return render(request, 'audio.html')
+
 
 def upload(request):
     return render(request, 'upload.html')

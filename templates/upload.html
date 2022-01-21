@@ -92,8 +92,9 @@
         >
           <h1 class="h2">Upload</h1>
           <form
-            action="/upload/"
+            action="/music/"
             method="POST"
+            enctype="multipart/form-data"
             class="align-items-center justify-content-center align-self-center flex-column"
             style="display: flex; width: 100%"
           >
@@ -102,21 +103,22 @@
               class="card-body justify-content-center align-items-center text-start input-group"
               style="display: flex; flex-direction: column"
             >
-              <label hidden for="login">Name</label>
+              <label hidden for="file_title">Name</label>
               <input
                 class="form-control w-100 mb-3"
-                id="loginLogin"
-                name="login"
+                id="file_title"
+                name="title"
                 type="text"
                 placeholder="Название"
                 style="background-color: #e5e5e5"
               />
-              <label hidden for="pass">File</label>
+              <label hidden for="inputGroupFile04">File</label>
               <input
                 name="file"
                 type="file"
                 class="form-control w-100"
                 id="inputGroupFile04"
+                required
                 aria-describedby="inputGroupFileAddon04"
                 aria-label="Upload"
               />
