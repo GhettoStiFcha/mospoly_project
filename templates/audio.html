@@ -73,7 +73,7 @@
                 class="nav-link link-light"
                 style="width: 100%"
                 href="/register/"
-                >Логин/Регистрация</a
+                >Регистрация</a
               >
             </li>
           </ul>
@@ -104,12 +104,18 @@
         >
         </div>
         <a href="javascript:document.getElementById('audioA').play();" id="playBtn" class="play position-absolute btn" style="width: 55px; height: 55px; border-radius: 50%; top: 42px;"></a>
-        <p class="position-absolute" style="background: #333; color: #fff; font-size: 28px; padding: 0 10px; left: 110px;">Название композиции</p>
-        <p class="position-absolute" style="background: #333; color: #fff; font-size: 20px; padding: 0 10px; left: 110px; top: 95px;">Имя автора</p>
+        <p class="position-absolute" style="background: #333; color: #fff; font-size: 28px; padding: 0 10px; left: 110px;">
+            {{ music.title }}
+        </p>
+        <p class="position-absolute" style="background: #333; color: #fff; font-size: 20px; padding: 0 10px; left: 110px; top: 95px;">{{ music.user.username }}</p>
 
-        <audio id="audioA" class="position-absolute" style="top: 0; left: 0; height: 100px; width: 100px;" src="/DR601.mp3" preload="auto"></audio>
+        <audio id="audioA" class="position-absolute" style="top: 0; left: 0; height: 100px; width: 100px;" src="{{ music.file.url }}" preload="auto"></audio>
 
-        <img class="position-absolute" style="height: 330px; top: 15px; right: 15px;" src="/static/images/grey.png" alt="img">
+      {% if music.image %}
+          <img class="position-absolute" style="height: 330px; top: 15px; right: 15px;" src="{{ music.image.url }}"/>
+      {% else %}
+          <img class="position-absolute" style="height: 330px; top: 15px; right: 15px;" src="/static/images/grey.png" alt="img">
+      {% endif %}
 
 
         <img class="position-absolute" style="width: 22px; top: 364.5px; left: 165px;" src="/static/svg/play.svg" alt="icon">

@@ -46,8 +46,9 @@ def music(request):
     return render(request, 'upload.html', {'form': form})
 
 
-def audio(request):
-    return render(request, 'audio.html')
+def audio(request, music_id):
+    item = Music.objects.get(pk=music_id)
+    return render(request, 'audio.html', {'music': item})
 
 
 def upload(request):
