@@ -12,7 +12,7 @@ from mysite.models import Profile, Music
 
 def index(request):
     items = Music.objects.all()
-    return render(request, "index.html", {'music': items})
+    return render(request, "index.html", {'music': items, 'user': request.user})
 
 
 def register(request):
