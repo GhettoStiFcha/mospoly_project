@@ -25,6 +25,9 @@ urlpatterns = [
     path('register/', register, name='register'),
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
-    path('music/', music, name='music')
+    path('music/', music, name='music'),
+    path('audio/', audio, name='audio'),
+    path('upload/', upload, name='upload')
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) +\
     static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

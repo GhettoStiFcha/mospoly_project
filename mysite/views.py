@@ -43,3 +43,9 @@ def music(request):
     data = Music.objects.all()
     return render(request, 'music/index.html', {'form': form, 'music': data})
 
+def audio(request):
+    return render(request, 'audio.html')
+
+def upload(request):
+    return render(request, 'upload.html')
+

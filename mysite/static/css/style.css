@@ -44,7 +44,7 @@ main{
 }
 
 .play{
-    background-image: url(/mysite/static/images/play.png);
+    background-image: url(/static/images/play.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
