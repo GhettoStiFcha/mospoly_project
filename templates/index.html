@@ -75,8 +75,7 @@
                 class="nav-link link-light"
                 style="width: 100%"
                 href="/register/"
-                >Логин/Регистрация</a
-              >
+                >Регистрация</a>
             </li>
           </ul>
         </nav>
@@ -89,149 +88,32 @@
           <div class="row mx-auto my-auto justify-content-center">
             <div
               id="recipeCarousel"
-              class="carousel carousel-dark slide"
-              data-bs-ride="carousel"
+              class="carousel slide" data-ride="carousel"
             >
-              <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                  <div class="col-md-3 text-start">
-                    <div class="card">
-                      <div class="card-img">
-                        <img
-                          src="/static/images/grey.png"
-                          class="img-fluid"
-                        />
-                      </div>
-                    </div>
-                    <a
-                      href="/audio/"
-                      class="text-decoration-none text-black"
-                      style="font-size: 18px; cursor: pointer"
-                    >
-                      Название композиции
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="col-md-3 text-start">
-                    <div class="card">
-                      <div class="card-img">
-                        <img
-                          src="/static/images/grey.png"
-                          class="img-fluid"
-                        />
-                      </div>
-                    </div>
-                    <a
-                      href="/audio/"
-                      class="text-decoration-none text-black"
-                      style="font-size: 18px; cursor: pointer"
-                    >
-                      Название композиции
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="col-md-3 text-start">
-                    <div class="card">
-                      <div class="card-img">
-                        <img
-                          src="/static/images/grey.png"
-                          class="img-fluid"
-                        />
-                      </div>
-                    </div>
-                    <a
-                      href="/audio/"
-                      class="text-decoration-none text-black"
-                      style="font-size: 18px; cursor: pointer"
-                    >
-                      Название композиции
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="col-md-3 text-start">
-                    <div class="card">
-                      <div class="card-img">
-                        <img
-                          src="/static/images/grey.png"
-                          class="img-fluid"
-                        />
-                      </div>
-                    </div>
-                    <a
-                      href="/audio/"
-                      class="text-decoration-none text-black"
-                      style="font-size: 18px; cursor: pointer"
-                    >
-                      Название композиции
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="col-md-3 text-start">
-                    <div class="card">
-                      <div class="card-img">
-                        <img
-                          src="/static/images/grey.png"
-                          class="img-fluid"
-                        />
-                      </div>
-                    </div>
-                    <a
-                      href="/audio/"
-                      class="text-decoration-none text-black"
-                      style="font-size: 18px; cursor: pointer"
-                    >
-                      Название композиции
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="col-md-3 text-start">
-                    <div class="card">
-                      <div class="card-img">
-                        <img
-                          src="/static/images/grey.png"
-                          class="img-fluid"
-                        />
-                      </div>
-                    </div>
-                    <a
-                      href="/audio/"
-                      class="text-decoration-none text-black"
-                      style="font-size: 18px; cursor: pointer"
-                    >
-                      Название композиции
-                    </a>
-                  </div>
-                </div>
+              <div style="display: flex">
+                  {% for item in music %}
+                          <div class="d-block w-25 m-1">
+                            <a
+                              href="/audio/"
+                              class="text-decoration-none text-black"
+                              style="font-size: 18px; cursor: pointer"
+                            >
+                                <div class="card">
+                                  <div class="card-img">
+                                      {% if item.image %}
+                                          <img src="{{ item.image.url }}" class="img-fluid"/>
+                                      {% else %}
+                                          <img src="/static/images/grey.png" class="img-fluid"/>
+                                      {% endif %}
+                                  </div>
+                                </div>
+                                <h5>
+                                  {{ item.title }}
+                                </h5>
+                            </a>
+                          </div>
+                  {% endfor %}
               </div>
-              <a
-                class="carousel-control-prev bg-transparent w-aut"
-                href="#recipeCarousel"
-                role="button"
-                data-bs-slide="prev"
-                style="height: 90%"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-              </a>
-              <a
-                class="carousel-control-next bg-transparent w-aut"
-                href="#recipeCarousel"
-                role="button"
-                data-bs-slide="next"
-                style="height: 90%"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-              </a>
             </div>
           </div>
         </div>

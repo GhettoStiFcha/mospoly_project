@@ -11,7 +11,8 @@ from mysite.models import Profile, Music
 
 
 def index(request):
-    return render(request, "index.html")
+    items = Music.objects.all()
+    return render(request, "index.html", {'music': items})
 
 
 def register(request):
@@ -35,7 +36,8 @@ def music(request):
     if request.method == 'POST':
         form = MusicForm(request.POST, request.FILES)
         if form.is_valid():
-            newdoc = Music(title=request.POST['title'], file=request.FILES['file'], user=request.user)
+            newdoc = Music(title=request.POST['title'], file=request.FILES['file'], image=request.FILES['image'],
+                           user=request.user)
             newdoc.save()
             return redirect('index')
     else:
@@ -50,4 +52,3 @@ def audio(request):
 
 def upload(request):
     return render(request, 'upload.html')
-

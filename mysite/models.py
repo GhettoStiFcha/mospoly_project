@@ -15,9 +15,11 @@ class Profile(models.Model):
 
 
 class Music(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, unique=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=50)
     file = models.FileField(upload_to=user_directory_path,
                             validators=[FileExtensionValidator(allowed_extensions=['mp3', 'wav'])])
+    image = models.FileField(upload_to=user_directory_path, null=True,
+                             validators=[FileExtensionValidator(allowed_extensions=['jpeg', 'jpg', 'png'])])
     likes = models.IntegerField(default=0)
     views = models.IntegerField(default=0)
